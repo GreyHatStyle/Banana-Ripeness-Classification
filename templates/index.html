@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Ripeness Classification</title>
+    <style>
+        .main-head{
+            text-align: center;
+        }
+
+        .btn{
+            background-color: aqua;
+            padding: 15px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-head">Banana Ripeness Classifier</h1>
+
+    <form class="form-control" action="/" method="post" 
+    enctype="multipart/form-data">
+
+        <input type="file" class="form-control" name="imagefile"
+        >
+
+        <input type="submit" class="btn" value="Predict Image" >
+    </form>
+
+    {% if prediction %}
+        <h2>Image result: {{prediction}}</h2>
+    {% endif %}
+</body>
+</html>
